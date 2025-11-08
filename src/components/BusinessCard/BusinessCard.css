@@ -1,0 +1,202 @@
+:root {
+    /* Colors */
+    --primary-background: #1a1b21;
+    --secondary-background: #161619;
+    --user-role-color: #7d6657;
+    --linked-cta-color: #5093e2;
+    --heading-color: #ffffff;
+    --description-color: #fbfaf2;
+
+    /* Fonts Sizes */
+    --name: 22px;
+    --role: 16px;
+    --website: 13px;
+    --social-cta: 14px;
+    --section-title: 14px;
+    --description: 12px;
+    --icon: 20px;
+
+    /* Font Weight */
+    --bold: 700;
+    --medium: 500;
+    --regular: 400;
+    --semi-bold: 600;
+
+    /* Border */
+    --radius: 15px
+}
+
+.link {
+    text-decoration: none;
+    color: var(--description-color);
+}
+
+.card__container {
+    width: 80%;
+    min-width: 1100px;
+    height: 60%;
+    background-color: var(--primary-background);
+    border-radius: var(--radius);
+    display: flex;
+    gap: .5rem;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.user__image {
+    width: 30%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: var(--radius);
+    border-bottom-left-radius: var(--radius);
+}
+
+.user__info {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    gap: 1rem;
+}
+
+.user__name {
+    font-size: var(--name);
+    font-weight: var(--bold);
+    color: var(--heading-color);
+    margin-bottom: 10px;
+}
+
+.user__role {
+    font-size: var(--role);
+    font-weight: var(--medium);
+    color: var(--user-role-color);
+    margin-bottom: 5px;
+}
+
+.user__profile__link {
+    font-size: var(--website);
+    font-weight: var(--regular);
+    color: var(--description-color);
+    text-decoration: none;
+}
+
+.socials__cta {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 30%;
+}
+
+.social__links {
+    height: 110%;
+    padding: 2px 4px;
+    text-decoration: none;
+    background-color: var(--linked-cta-color);
+    margin: 0px .5em;
+    border-radius: 5px;
+    font-size: var(--social-cta);
+    font-weight: var(--regular);
+}
+
+.about,
+.interest {
+    font-size: var(--section-title);
+    font-weight: var(--semi-bold);
+    color: var(--heading-color);
+}
+
+.about__description,
+.interest__description {
+    margin: 5px 0px 20px 0px;
+    max-width: 500px;
+    font-size: var(--description);
+    font-weight: var(--regular);
+    color: var(--description-color);
+}
+
+.socials {
+    width: 5%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-top-right-radius: var(--radius);
+    border-bottom-right-radius: var(--radius);
+    background-color: var(--secondary-background);
+}
+
+.social__icons {
+    font-size: var(--icon);
+    color: var(--user-role-color);
+}
+
+@media screen and (max-width: 1000px) {
+    .card__container {
+        flex-direction: column;
+        gap: 0;
+        min-width: 250px;
+        width: 30%;
+        height: min-content;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        margin-top: 1rem;
+    }
+
+    .user__image {
+        width: 100%;
+        height: 50%;
+        border-top-right-radius: var(--radius);
+        border-bottom-left-radius: 0px;
+        object-fit: cover;
+    }
+
+    .user__info {
+        width: 100%;
+        gap: 0.6rem;
+    }
+
+    .socials__cta {
+        width: 100%;
+    }
+
+    .social__links {
+        padding: 1px 4px;
+    }
+
+    .socials {
+        width: 100%;
+        height: 10%;
+        flex-direction: row;
+        border-radius: 0px;
+    }
+
+    .social__icons {
+        font-size: 15px;
+    }
+
+    .user__name,
+    .user__role {
+        margin-bottom: 2px;
+    }
+
+    .about__description,
+    .interest__description {
+        margin: 2px 0px 7px 0px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .card__container {
+        width: 90%;
+        margin-top: 10rem;
+    }
+
+    .socials {
+        padding: 10px 0px;
+    }
+
+    .social__icons {
+        font-size: var(--icon);
+    }
+}
